@@ -5,3 +5,16 @@
 4. Creare la stringa di output.
 5. Effettuare l'innerHTML dell'output nel tag designato.
 */ 
+
+const outputTag = document.getElementById('output');
+
+const km = parseInt(prompt('Inserire Km'));
+const age = parseInt(prompt('Inserire età'));
+const costoKm = km * 0.21;
+const scontoMinorenni = (costoKm * 20) / 100;
+const scontoOver = (costoKm * 40) / 100;
+let message
+
+
+
+outputTag.innerHTML = message;
