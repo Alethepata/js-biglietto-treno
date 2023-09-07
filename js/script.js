@@ -17,10 +17,10 @@ let message;
 
 if(age < 18){
     const prezzoFinale = costoKm - scontoMinorenni;
-    message= prezzoFinale;
+    message= Math.round(prezzoFinale * 100) / 100;
 }else if(age > 65){
     const prezzoFinale = costoKm - scontoOver;
-    message= prezzoFinale;
+    message= Math.round(prezzoFinale * 100) / 100;
 } else{
     const prezzoFinale = Math.round(costoKm * 100) / 100;
     message= prezzoFinale;
