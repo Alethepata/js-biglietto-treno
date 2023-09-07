@@ -13,19 +13,17 @@ const age = parseInt(prompt('Inserire età'));
 const costoKm = km * 0.21;
 const scontoMinorenni = (costoKm * 20) / 100;
 const scontoOver = (costoKm * 40) / 100;
-let message
+let message;
 
 if(age < 18){
     const prezzoFinale = costoKm - scontoMinorenni;
-    message= prezzoFinale
+    message= prezzoFinale;
 }else if(age > 65){
     const prezzoFinale = costoKm - scontoOver;
-    message= prezzoFinale
+    message= prezzoFinale;
 } else{
-    const prezzoFinale =costoKm;
+    const prezzoFinale = Math.round(costoKm * 100) / 100;
     message= prezzoFinale;
 }
-
-
 
 outputTag.innerHTML = message;
